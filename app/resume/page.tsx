@@ -221,7 +221,14 @@ export default function ResumePage() {
                       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 border-b-2 border-gray-100 pb-4">
                         <div>
                           <h3 className="text-2xl font-black uppercase leading-tight mb-1">{job.title}</h3>
-                          <p className="text-lg font-mono font-bold text-gray-600">{job.company}</p>
+                          <div className="flex flex-wrap items-center gap-3 mt-1">
+                            <p className="text-lg font-mono font-bold text-gray-600">{job.company}</p>
+                            {job.place && (
+                              <span className="text-xs font-mono font-bold uppercase tracking-wider border-2 border-[var(--neo-border)] px-2 py-0.5 bg-secondary text-black">
+                                {job.place}
+                              </span>
+                            )}
+                          </div>
                         </div>
                         <div className="self-start md:self-center bg-[var(--neo-text)] text-white px-4 py-2 font-mono text-sm font-bold shadow-neo-primary">
                           {job.date}
