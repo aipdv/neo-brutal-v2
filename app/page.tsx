@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowDown, FolderOpen, Mail, Code2, Terminal, GitBranch, Zap, Calendar } from 'lucide-react';
+import { ArrowDown, FolderOpen, Envelope as Mail, Code as Code2, Terminal, GitBranch, Lightning as Zap, Calendar, ArrowUpRight, ArrowRight } from '@phosphor-icons/react';
 import LogoSpotlightCarousel from '@/components/LogoSpotlightCarousel';
 import ISTClock from '@/components/ISTClock';
 import { motion } from 'framer-motion';
@@ -31,7 +31,7 @@ export default function HomePage() {
 
               {/* Mobile: "Available for Hire" Badge & Absolute Profile Image */}
               <div className="relative mb-12 sm:mb-8">
-                <div className="inline-block px-2 py-1 sm:px-3 sm:py-1 bg-black text-primary border-2 border-black font-mono text-[10px] sm:text-xs font-bold uppercase tracking-widest shadow-[2px_2px_0px_0px_rgba(39,255,20,1)]">
+                <div className="inline-block px-2 py-1 sm:px-3 sm:py-1 bg-neo-text text-primary border-2 border-neo-border font-mono text-[10px] sm:text-xs font-bold uppercase tracking-widest shadow-[2px_2px_0px_0px_rgba(39,255,20,1)]">
                   Available for Hire
                 </div>
 
@@ -72,21 +72,21 @@ export default function HomePage() {
               <div className="flex flex-col gap-3 relative z-10">
                 <Link
                   href="/projects"
-                  className="px-5 py-3 sm:px-8 sm:py-4 bg-primary text-black font-bold text-sm sm:text-lg uppercase tracking-wider btn-neo flex items-center justify-center gap-2 group w-full"
+                  className="px-5 py-3 sm:px-8 sm:py-4 bg-primary text-neo-text font-bold text-sm sm:text-lg uppercase tracking-wider btn-neo flex items-center justify-center gap-2 group w-full"
                 >
                   <motion.span whileHover={{ scale: 1.05 }} className="flex items-center gap-2">
                     View Selected Works
-                    <ArrowDown className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-y-1 transition-transform" />
+                    <ArrowDown weight="bold" className="w-5 h-5 sm:w-6 sm:h-6" />
                   </motion.span>
                 </Link>
                 <a
                   href={RESUME_DATA.contact.links.find(l => l.name === 'Cal.com')?.url || '#'}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-5 py-3 sm:px-8 sm:py-4 bg-white text-black font-bold text-sm sm:text-lg uppercase tracking-wider hover:bg-black hover:text-primary btn-neo transition-all flex items-center justify-center gap-2 w-full"
+                  className="px-5 py-3 sm:px-8 sm:py-4 bg-white text-neo-text font-bold text-sm sm:text-lg uppercase tracking-wider btn-neo transition-all flex items-center justify-center gap-2 w-full"
                 >
                   Book Strategy Call
-                  <span className="text-lg sm:text-xl">↗</span>
+                  <ArrowUpRight weight="bold" className="w-5 h-5 sm:w-6 sm:h-6" />
                 </a>
               </div>
             </motion.div>
@@ -133,7 +133,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4, duration: 0.5 }}
-                className="border-3 border-neo-border bg-black text-primary p-5 shadow-neo flex flex-col justify-between hover:bg-gray-900 transition-colors"
+                className="border-3 border-neo-border bg-neo-text text-primary p-5 shadow-neo flex flex-col justify-between hover:bg-gray-900 transition-colors"
               >
                 <GitBranch className="w-8 h-8" />
                 <div>
@@ -147,9 +147,9 @@ export default function HomePage() {
       </section>
 
       {/* Marquee Section - Hazard Tape Style */}
-      <section className="py-0 bg-primary border-y-[3px] border-black relative overflow-hidden">
+      <section className="py-0 bg-primary border-y-[3px] border-neo-border relative overflow-hidden">
         {/* Technologies Header */}
-        <div className="text-center py-2 border-b-[3px] border-black">
+        <div className="text-center py-2 border-b-[3px] border-neo-border">
           <h3 className="text-sm font-bold tracking-widest uppercase inline-block">The Arsenal</h3>
         </div>
         <div className="w-full overflow-hidden py-6">
@@ -157,22 +157,22 @@ export default function HomePage() {
             {/* Repeat content to ensure seamless loop */}
             {[...Array(2)].map((_, i) => (
               <div key={i} className="flex items-center gap-20 px-10">
-                <div className="md:text-4xl text-2xl font-black text-black tracking-tight">
+                <div className="md:text-4xl text-2xl font-black text-neo-text tracking-tight">
                   Next.js
                 </div>
-                <div className="md:text-4xl text-2xl font-black text-black tracking-tight">
+                <div className="md:text-4xl text-2xl font-black text-neo-text tracking-tight">
                   ReactJS
                 </div>
-                <div className="md:text-4xl text-2xl font-black text-black tracking-tight">
+                <div className="md:text-4xl text-2xl font-black text-neo-text tracking-tight">
                   TypeScript
                 </div>
-                <div className="md:text-4xl text-2xl font-black text-black tracking-tight">
+                <div className="md:text-4xl text-2xl font-black text-neo-text tracking-tight">
                   Python
                 </div>
-                <div className="md:text-4xl text-2xl font-black text-black tracking-tight">
+                <div className="md:text-4xl text-2xl font-black text-neo-text tracking-tight">
                   LangGraph
                 </div>
-                <div className="md:text-4xl text-2xl font-black text-black tracking-tight">
+                <div className="md:text-4xl text-2xl font-black text-neo-text tracking-tight">
                   Supabase
                 </div>
               </div>
@@ -205,11 +205,11 @@ export default function HomePage() {
       {/* Battle Tested - Achievements Carousel */}
       <section className="max-w-7xl mx-auto px-4 md:px-6 py-12">
         <div className="flex items-center gap-4 mb-8">
-          <div className="h-8 w-8 bg-black flex items-center justify-center text-primary">
+          <div className="h-8 w-8 bg-neo-text flex items-center justify-center text-primary">
             <Zap className="w-5 h-5" />
           </div>
           <h2 className="text-3xl font-black uppercase tracking-tight">Battle Tested</h2>
-          <div className="h-1 flex-1 bg-black"></div>
+          <div className="h-1 flex-1 bg-neo-text"></div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -221,7 +221,7 @@ export default function HomePage() {
             transition={{ duration: 0.5 }}
             className="border-3 border-neo-border neo-brutal-box bg-white shadow-neo overflow-hidden group"
           >
-            <div className="aspect-video overflow-hidden border-b-3 border-black relative">
+            <div className="aspect-video overflow-hidden border-b-3 border-neo-border relative">
               <Image
                 src="/images/achievements/iim-hackathon.webp"
                 alt="IIM Nagpur Hackathon Certificate"
@@ -232,7 +232,7 @@ export default function HomePage() {
             </div>
             <div className="p-6">
               <div className="flex items-center gap-2 mb-2">
-                <span className="bg-primary text-black text-xs font-bold px-2 py-1 border-2 border-black uppercase">Winner</span>
+                <span className="bg-primary text-neo-text text-xs font-bold px-2 py-1 border-2 border-neo-border uppercase">Winner</span>
                 <span className="terminal-invert text-xs font-bold uppercase">1ST Place</span>
               </div>
               <h3 className="text-xl font-black uppercase tracking-tight mb-2">IIM Nagpur Hackathon</h3>
@@ -248,7 +248,7 @@ export default function HomePage() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="border-3 border-neo-border neo-brutal-box bg-white shadow-neo overflow-hidden group"
           >
-            <div className="aspect-video overflow-hidden border-b-3 border-black relative">
+            <div className="aspect-video overflow-hidden border-b-3 border-neo-border relative">
               <Image
                 src="/images/achievements/hackllm-certificate.webp"
                 alt="IIIT Delhi HackLLM Certificate"
@@ -259,7 +259,7 @@ export default function HomePage() {
             </div>
             <div className="p-6">
               <div className="flex items-center gap-2 mb-2">
-                <span className="bg-primary text-black text-xs font-bold px-2 py-1 border-2 border-black uppercase">Winner</span>
+                <span className="bg-primary text-neo-text text-xs font-bold px-2 py-1 border-2 border-neo-border uppercase">Winner</span>
                 <span className="terminal-invert text-xs font-bold uppercase">3RD Place</span>
               </div>
               <h3 className="text-xl font-black uppercase tracking-tight mb-2">IIIT Delhi HackLLM</h3>
@@ -272,11 +272,11 @@ export default function HomePage() {
       {/* Explore More - Premium Navigation Bento Grid */}
       <section className="max-w-7xl mx-auto px-4 md:px-6 py-12 lg:py-20">
         <div className="flex items-center gap-4 mb-10">
-          <div className="h-10 w-10 bg-black flex items-center justify-center text-primary shadow-neo-sm">
-            <ArrowDown className="w-6 h-6" />
+          <div className="h-10 w-10 bg-neo-text flex items-center justify-center text-primary shadow-neo-sm">
+            <ArrowDown weight="bold" className="w-6 h-6" />
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight">Explore More</h2>
-          <div className="h-1 flex-1 bg-black"></div>
+          <div className="h-1 flex-1 bg-neo-text"></div>
           <span className="font-mono text-xs text-gray-500 hidden md:block">// QUICK NAV</span>
         </div>
 
@@ -293,34 +293,25 @@ export default function HomePage() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.4 }}
-              className="border-4 border-black bg-black text-white p-5 sm:p-8 shadow-[5px_5px_0px_0px_#39FF14] h-full min-h-[180px] sm:min-h-[300px] md:min-h-[420px] flex flex-col justify-between transition-all duration-300 group-hover:translate-x-[3px] group-hover:translate-y-[3px] group-hover:shadow-none relative overflow-hidden"
+              className="border-4 border-neo-border bg-neo-text text-white p-5 sm:p-8 shadow-[5px_5px_0px_0px_#39FF14] h-full min-h-[180px] sm:min-h-[300px] md:min-h-[420px] flex flex-col justify-between transition-all duration-300 group-hover:translate-x-[3px] group-hover:translate-y-[3px] group-hover:shadow-none relative overflow-hidden"
             >
-              {/* Scanline effect */}
-              <div className="absolute inset-0 pointer-events-none opacity-20" style={{ backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(57, 255, 20, 0.03) 2px, rgba(57, 255, 20, 0.03) 4px)' }}></div>
-
-              {/* Animated Corner Decorations */}
-              <div className="absolute top-4 left-4 w-5 h-5 border-l-2 border-t-2 border-primary"></div>
-              <div className="absolute top-4 right-4 w-5 h-5 border-r-2 border-t-2 border-primary"></div>
-              <div className="absolute bottom-4 left-4 w-5 h-5 border-l-2 border-b-2 border-primary"></div>
-              <div className="absolute bottom-4 right-4 w-5 h-5 border-r-2 border-b-2 border-primary"></div>
-
+              
               <div className="relative z-10">
                 <div className="flex justify-between items-start mb-3 sm:mb-6">
-                  <span className="bg-primary text-black px-2 py-1 font-mono text-sm font-bold">01</span>
-                  <Code2 className="w-10 h-10 text-gray-600 group-hover:text-primary group-hover:rotate-12 transition-all duration-300" />
+                  <span className="bg-primary text-neo-text px-2 py-1 font-mono text-sm font-bold">01</span>
                 </div>
                 <h3 className="text-2xl sm:text-4xl md:text-5xl font-black uppercase tracking-tighter mb-2 sm:mb-4 leading-[0.9] text-primary">
-                  About<span className="text-white">.</span>
+                  About<span className="text-white"></span>
                 </h3>
                 <p className="font-mono text-xs sm:text-base text-gray-400 leading-relaxed max-w-[200px] hidden sm:block">
-                  The story, the stack, the mission behind the code.
+                  A short description about my taste.
                 </p>
               </div>
 
               <div className="relative z-10 hidden sm:flex items-center justify-between pt-6 border-t border-gray-700">
-                <span className="font-mono text-sm font-bold uppercase tracking-wider text-gray-400 group-hover:text-primary transition-colors">Read More</span>
-                <span className="w-10 h-10 border-2 border-primary flex items-center justify-center bg-primary text-black group-hover:bg-transparent group-hover:text-primary transition-colors">
-                  <span className="text-xl font-bold">→</span>
+                <span className="font-mono text-sm font-bold tracking-wider text-gray-400 group-hover:text-primary transition-colors">Read More</span>
+                <span className="w-10 h-10 border-2 border-primary flex items-center justify-center bg-primary text-neo-text group-hover:bg-transparent group-hover:text-primary transition-colors">
+                  <ArrowRight weight="bold" className="w-6 h-6" />
                 </span>
               </div>
             </motion.div>
@@ -336,23 +327,23 @@ export default function HomePage() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.1, duration: 0.4 }}
-              className="border-4 border-black bg-primary p-4 sm:p-6 shadow-neo min-h-[180px] sm:min-h-[200px] h-full flex flex-col justify-between transition-all duration-300 group-hover:translate-x-[3px] group-hover:translate-y-[3px] group-hover:shadow-none relative overflow-hidden"
+              className="border-4 border-neo-border bg-primary p-4 sm:p-6 shadow-neo min-h-[180px] sm:min-h-[200px] h-full flex flex-col justify-between transition-all duration-300 group-hover:translate-x-[3px] group-hover:translate-y-[3px] group-hover:shadow-none relative overflow-hidden"
             >
               {/* Diagonal stripes overlay */}
               <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px)' }}></div>
 
               <div className="relative z-10">
                 <div className="flex justify-between items-start mb-4">
-                  <span className="bg-black text-primary px-2 py-1 font-mono text-xs font-bold">02</span>
-                  <FolderOpen className="w-10 h-10 text-black/40 group-hover:text-black group-hover:scale-110 transition-all duration-300" />
+                  <span className="bg-neo-text text-primary px-2 py-1 font-mono text-xs font-bold">02</span>
+                  <FolderOpen className="w-10 h-10 text-neo-text/40 group-hover:text-neo-text group-hover:scale-110 transition-all duration-300" />
                 </div>
                 <h3 className="text-xl sm:text-3xl font-black uppercase tracking-tighter leading-[0.9]">
                   Selected<br />Works
                 </h3>
               </div>
               <div className="relative z-10 flex items-center justify-between pt-2 sm:pt-4">
-                <span className="font-mono text-sm text-black/70">{featuredProjects.length}+ projects</span>
-                <span className="font-black text-xl">↗</span>
+                <span className="font-mono text-sm text-neo-text/70">{featuredProjects.length}+ projects</span>
+                <ArrowUpRight weight="bold" className="w-6 h-6" />
               </div>
             </motion.div>
           </Link>
@@ -369,7 +360,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.2, duration: 0.4 }}
-              className="border-4 border-black bg-secondary p-4 sm:p-5 shadow-neo min-h-[180px] sm:min-h-[200px] h-full flex flex-col justify-between transition-all duration-300 group-hover:translate-x-[3px] group-hover:translate-y-[3px] group-hover:shadow-none relative overflow-hidden"
+              className="border-4 border-neo-border bg-secondary p-4 sm:p-5 shadow-neo min-h-[180px] sm:min-h-[200px] h-full flex flex-col justify-between transition-all duration-300 group-hover:translate-x-[3px] group-hover:translate-y-[3px] group-hover:shadow-none relative overflow-hidden"
             >
               {/* Animated pulse effect on hover */}
               <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-500"></div>
@@ -378,7 +369,7 @@ export default function HomePage() {
               <div className="relative z-10">
                 <div className="flex justify-between items-start mb-3">
                   <span className="terminal-invert-sm font-mono">OPEN</span>
-                  <Calendar className="w-8 h-8 text-gray-400 group-hover:text-black group-hover:rotate-6 transition-all duration-300" />
+                  <Calendar className="w-8 h-8 text-gray-400 group-hover:text-neo-text group-hover:rotate-6 transition-all duration-300" />
                 </div>
                 <h3 className="text-xl sm:text-3xl font-black uppercase tracking-tighter leading-[0.95]">
                   Book a<br />Strategy Call
@@ -386,7 +377,7 @@ export default function HomePage() {
               </div>
               <div className="relative z-10 font-mono text-xs text-gray-600 flex items-center gap-2">
                 <span>15 min</span>
-                <span className="text-primary font-bold">FREE ↗</span>
+                <span className="text-primary font-bold flex items-center gap-1">FREE <ArrowUpRight weight="bold" className="w-5 h-5" /></span>
               </div>
             </motion.div>
           </a>
@@ -401,7 +392,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.3, duration: 0.4 }}
-              className="border-4 border-black bg-white p-4 sm:p-6 shadow-neo min-h-[180px] sm:min-h-[200px] h-full flex flex-col justify-between transition-all duration-300 group-hover:translate-x-[3px] group-hover:translate-y-[3px] group-hover:shadow-none relative overflow-hidden"
+              className="border-4 border-neo-border bg-white p-4 sm:p-6 shadow-neo min-h-[180px] sm:min-h-[200px] h-full flex flex-col justify-between transition-all duration-300 group-hover:translate-x-[3px] group-hover:translate-y-[3px] group-hover:shadow-none relative overflow-hidden"
             >
               {/* Subtle grid pattern */}
               <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 20px, rgba(0,0,0,0.1) 20px, rgba(0,0,0,0.1) 21px), repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(0,0,0,0.1) 20px, rgba(0,0,0,0.1) 21px)' }}></div>
@@ -409,7 +400,7 @@ export default function HomePage() {
               <div className="relative z-10">
                 <div className="flex justify-between items-start mb-4">
                   <span className="terminal-invert font-mono text-xs">03</span>
-                  <Terminal className="w-10 h-10 text-gray-300 group-hover:text-black group-hover:scale-110 transition-all duration-300" />
+                  <Terminal className="w-10 h-10 text-gray-300 group-hover:text-neo-text group-hover:scale-110 transition-all duration-300" />
                 </div>
                 <h3 className="text-xl sm:text-3xl font-black uppercase tracking-tighter leading-[0.9]">
                   Resume<span className="text-primary">.</span>
@@ -428,7 +419,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.4, duration: 0.4 }}
-              className="border-4 border-black bg-black p-4 sm:p-5 shadow-[5px_5px_0px_0px_#39FF14] min-h-[180px] sm:min-h-[200px] h-full flex flex-col justify-between relative overflow-hidden"
+              className="border-4 border-neo-border bg-neo-text p-4 sm:p-5 shadow-[5px_5px_0px_0px_#39FF14] min-h-[180px] sm:min-h-[200px] h-full flex flex-col justify-between relative overflow-hidden"
             >
               {/* CRT scanline effect */}
               <div className="absolute inset-0 pointer-events-none opacity-30" style={{ backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(57, 255, 20, 0.05) 2px, rgba(57, 255, 20, 0.05) 4px)' }}></div>
@@ -452,18 +443,18 @@ export default function HomePage() {
             href="/contact"
             className="sm:col-span-2 md:col-span-6 relative group"
           >
-            <div className="border-4 border-black bg-white px-4 sm:px-8 py-4 sm:py-6 shadow-neo flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all duration-300 group-hover:translate-x-[3px] group-hover:translate-y-[3px] group-hover:shadow-none group-hover:bg-primary">
+            <div className="border-4 border-neo-border bg-white px-4 sm:px-8 py-4 sm:py-6 shadow-neo flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all duration-300 group-hover:translate-x-[3px] group-hover:translate-y-[3px] group-hover:shadow-none group-hover:bg-primary">
               <div className="flex items-center gap-3 sm:gap-6">
-                <span className="text-4xl sm:text-6xl font-black">→</span>
+                <ArrowRight weight="bold" className="w-10 h-10 sm:w-16 sm:h-16" />
                 <div>
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-black uppercase tracking-tighter">Let's Build Together</h3>
-                  <p className="font-mono text-sm text-gray-500 group-hover:text-black/70 transition-colors">Have a vision? Let's make it happen.</p>
+                  <p className="font-mono text-sm text-gray-500 group-hover:text-neo-text/70 transition-colors">Have a vision? Let's make it happen.</p>
                 </div>
               </div>
               <div className="hidden md:flex items-center gap-4">
-                <Mail className="w-8 h-8 text-gray-400 group-hover:text-black transition-colors" />
-                <div className="w-14 h-14 border-3 border-black flex items-center justify-center bg-black text-primary group-hover:bg-primary group-hover:text-black transition-colors">
-                  <span className="text-2xl font-bold">↗</span>
+                <Mail className="w-8 h-8 text-gray-400 group-hover:text-neo-text transition-colors" />
+                <div className="w-14 h-14 border-3 border-neo-border flex items-center justify-center bg-neo-text text-primary group-hover:bg-primary group-hover:text-neo-text transition-colors">
+                  <ArrowUpRight weight="bold" className="w-8 h-8" />
                 </div>
               </div>
             </div>
