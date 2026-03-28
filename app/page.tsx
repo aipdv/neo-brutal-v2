@@ -121,7 +121,7 @@ export default function HomePage() {
                 className="border-3 border-neo-border bg-white p-5 shadow-neo flex flex-col justify-between hover:bg-secondary transition-colors"
               >
                 <div className="flex justify-between items-start">
-                  <Terminal className="w-8 h-8" />
+                  <Terminal weight="bold" className="w-8 h-8" />
                   <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
                 </div>
                 <div>
@@ -135,7 +135,7 @@ export default function HomePage() {
                 transition={{ delay: 0.4, duration: 0.5 }}
                 className="border-3 border-neo-border bg-neo-text text-primary p-5 shadow-neo flex flex-col justify-between hover:bg-gray-900 transition-colors"
               >
-                <GitBranch className="w-8 h-8" />
+                <GitBranch weight="bold" className="w-8 h-8" />
                 <div>
                   <h3 className="font-black text-4xl">50+</h3>
                   <p className="font-mono text-[10px] font-bold uppercase leading-tight mt-1 text-white">Projects<br />Built</p>
@@ -206,7 +206,7 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 md:px-6 py-12">
         <div className="flex items-center gap-4 mb-8">
           <div className="h-8 w-8 bg-neo-text flex items-center justify-center text-primary">
-            <Zap className="w-5 h-5" />
+            <Zap weight="bold" className="w-5 h-5" />
           </div>
           <h2 className="text-3xl font-black uppercase tracking-tight">System Testing</h2>
           <div className="h-1 flex-1 bg-neo-text"></div>
@@ -335,7 +335,7 @@ export default function HomePage() {
               <div className="relative z-10">
                 <div className="flex justify-between items-start mb-4">
                   <span className="bg-neo-text text-primary px-2 py-1 font-mono text-xs font-bold">02</span>
-                  <FolderOpen className="w-10 h-10 text-neo-text/40 group-hover:text-neo-text group-hover:scale-110 transition-all duration-300" />
+                  <FolderOpen weight="bold" className="w-10 h-10 text-neo-text/40 group-hover:text-neo-text group-hover:scale-110 transition-all duration-300" />
                 </div>
                 <h3 className="text-xl sm:text-3xl font-black uppercase tracking-tighter leading-[0.9]">
                   Selected<br />Works
@@ -369,7 +369,7 @@ export default function HomePage() {
               <div className="relative z-10">
                 <div className="flex justify-between items-start mb-3">
                   <span className="terminal-invert-sm font-mono">OPEN</span>
-                  <Calendar className="w-8 h-8 text-gray-400 group-hover:text-neo-text group-hover:rotate-6 transition-all duration-300" />
+                  <Calendar weight="bold" className="w-8 h-8 text-gray-400 group-hover:text-neo-text group-hover:rotate-6 transition-all duration-300" />
                 </div>
                 <h3 className="text-xl sm:text-3xl font-black uppercase tracking-tighter leading-[0.95]">
                   Schedule<br />Consultation
@@ -400,7 +400,7 @@ export default function HomePage() {
               <div className="relative z-10">
                 <div className="flex justify-between items-start mb-4">
                   <span className="terminal-invert font-mono text-xs">03</span>
-                  <Terminal className="w-10 h-10 text-gray-300 group-hover:text-neo-text group-hover:scale-110 transition-all duration-300" />
+                  <Terminal weight="bold" className="w-10 h-10 text-gray-300 group-hover:text-neo-text group-hover:scale-110 transition-all duration-300" />
                 </div>
                 <h3 className="text-xl sm:text-3xl font-black uppercase tracking-tighter leading-[0.9]">
                   Resume<span className="text-primary">.</span>
@@ -452,7 +452,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="hidden md:flex items-center gap-4">
-                <Mail className="w-8 h-8 text-gray-400 group-hover:text-neo-text transition-colors" />
+                <Mail weight="bold" className="w-8 h-8 text-gray-400 group-hover:text-neo-text transition-colors" />
                 <div className="w-14 h-14 border-3 border-neo-border flex items-center justify-center bg-neo-text text-primary group-hover:bg-primary group-hover:text-neo-text transition-colors">
                   <ArrowUpRight weight="bold" className="w-8 h-8" />
                 </div>

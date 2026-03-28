@@ -63,15 +63,15 @@ export default function AboutPage() {
                                 <h3 className="font-mono text-xs uppercase tracking-widest">About.exe</h3>
                             </div>
                             <a className="px-4 py-3 border-b-2 border-gray-100 hover:bg-primary hover:border-black hover:border-b-2 font-mono text-sm font-bold flex items-center gap-2 group transition-colors" href="#bio">
-                                <User className="w-5 h-5" />
+                                <User weight="bold" className="w-5 h-5" />
                                 <span>_BIO</span>
                             </a>
                             <a className="px-4 py-3 border-b-2 border-gray-100 hover:bg-primary hover:border-black hover:border-b-2 font-mono text-sm font-bold flex items-center gap-2 group transition-colors" href="#stack">
-                                <Layers className="w-5 h-5" />
+                                <Layers weight="bold" className="w-5 h-5" />
                                 <span>_EXPERTISE</span>
                             </a>
                             <a className="px-4 py-3 hover:bg-primary hover:border-black font-mono text-sm font-bold flex items-center gap-2 group transition-colors" href="#offline">
-                                <Gamepad2 className="w-5 h-5" />
+                                <Gamepad2 weight="bold" className="w-5 h-5" />
                                 <span>_OFFLINE</span>
                             </a>
                         </motion.nav>
@@ -140,7 +140,7 @@ export default function AboutPage() {
                     >
                         <motion.div variants={itemVariants} className="flex items-center gap-4">
                             <div className="h-8 w-8 bg-black flex items-center justify-center text-white">
-                                <Layers className="w-5 h-5" />
+                                <Layers weight="bold" className="w-5 h-5" />
                             </div>
                             <h2 className="text-3xl font-black uppercase tracking-tight">Focus Areas</h2>
                             <div className="h-1 flex-1 bg-black"></div>
@@ -204,7 +204,7 @@ export default function AboutPage() {
                     >
                         <motion.div variants={itemVariants} className="flex items-center gap-4">
                             <div className="h-8 w-8 bg-black flex items-center justify-center text-white">
-                                <Gamepad2 className="w-5 h-5" />
+                                <Gamepad2 weight="bold" className="w-5 h-5" />
                             </div>
                             <h2 className="text-3xl font-black uppercase tracking-tight">Offline Mode</h2>
                             <div className="h-1 flex-1 bg-black"></div>
