@@ -11,6 +11,23 @@ export async function getGeminiConfig() {
     model: 'models/gemini-3.1-flash-live-preview',
     // Config matches GoogleGenAI.LiveConfig
     config: {
+      tools: [{
+        functionDeclarations: [{
+          name: "navigate_to",
+          description: "Navigate the user's browser to a specific section of the portfolio",
+          parameters: {
+            type: "object",
+            properties: {
+              page: {
+                type: "string",
+                enum: ["about", "contact", "links", "projects", "resume", "home", "research"],
+                description: "The portfolio page to navigate to"
+              }
+            },
+            required: ["page"]
+          }
+        }]
+      }],
       responseModalities: ["AUDIO"],
       speechConfig: {
         voiceConfig: {
