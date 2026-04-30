@@ -296,7 +296,7 @@ export default function ResumePage() {
               <div className="flex flex-col gap-6">
                 {achievements.map((award, index) => (
                   <motion.div variants={itemVariants} key={award.title} className="neo-brutal-box p-0 flex flex-col sm:flex-row items-stretch group">
-                    <div className={`bg-primary border-b-3 sm:border-b-0 sm:border-r-3 border-neo-border p-6 flex items-center justify-center min-w-[120px] group-hover:bg-[var(--neo-text)] group-hover:text-white transition-colors`}>
+                    <div className="bg-secondary border-b-3 sm:border-b-0 sm:border-r-3 border-neo-border p-6 flex items-center justify-center min-w-[120px] group-hover:bg-primary transition-colors">
                       <span className="font-mono font-black text-xl text-center">{award.date}</span>
                     </div>
                     <div className="p-6 flex-1 flex flex-col justify-center bg-white relative overflow-hidden">

@@ -46,7 +46,7 @@ export const RESUME_DATA: ResumeData = {
       degree: "Bachelors of Technology (Hons.) CSE Data Science",
       institution: "Chhattisgarh Swami Vivekanand Technical University, Bhilai",
       date: "2022-Present",
-      details: "7th Semester - CGPA: 8.6/10"
+      details: "8th Semester - CGPA: 8.6/10"
     }
   ],
   projects: [
